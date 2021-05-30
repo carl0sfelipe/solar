@@ -3,10 +3,19 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
-.banner{
-	display: block;
+
+
+.direitos{
+	align-self: center;
+		font-size: 15px;
+		line-height: 10px;
+	}
+
+
+#banner{
+	display: flex;
 	width: 100%; 
-	max-height: 50%;
+	max-height: 50vh;
  }
 
  ::selection{
@@ -14,41 +23,47 @@
  }
 
  
-
- .servicos img{
+ @media (min-width: 630px){
+	.rodape{
+		background-color: #615631;
+		display: grid;
+		grid-template-areas: 'div' 'div div';
+		padding-left: 5%;
+		padding-right: 5%;
+	column-gap: 10%;
+	}
+	
+ .servico img{
 	 display: flex;
 	 margin: auto;
 	 border-radius: 70%;
      border: black;
-	 max-width: 200px;
+	 max-width: 45%;
 	 margin-top: 0;
 	 margin-bottom: 0;
 
  }
 
  .servicos{
-	margin-top: 0;
-	column-gap: 3%;
+padding: 10%;	
+column-gap: 3%;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
+justify-content: space-evenly;
 padding-left: 15%;
 padding-right: 15%;
 
- }
+ }}
 
  .servico{
 	 margin-top: 0;
 display: flex;
 flex-direction: column;
-justify-self: flex-start;
 align-items: center;
  }
 
-svg {
-	width: 70px;
-	height: 70px;
-	fill:#FFF
-  }
+
+
   svg:hover {
 	fill: #ffc400
   }
@@ -119,11 +134,14 @@ nav {
 
 #logo {
 	display: block;
-	padding: 0 30px;
+	padding: 10px 20px;
 	float: left;
 	font-size:20px;
 	line-height: 60px;
+	max-width: 80px;
+	color: white;
 }
+
 
 /* Since we'll have the "ul li" "float:left"
  * we need to add a clear after the container. */
@@ -214,6 +232,52 @@ li > a:only-child:after { content: ''; }
 --------------------------------------------- */
 
 @media all and (max-width : 768px) {
+
+	#tab{
+		display: flex;
+		justify-content: space-between;
+	
+	}
+
+	svg:hover {
+		fill: #ffc400
+	  }
+	  
+	  #hamb{
+		  display: flex;
+		  justify-content: flex-start;
+width: 40px;
+height: 40px;
+}
+
+#hambu{
+	display: flex;
+
+	align-items: center;
+	height: 70px;
+}
+
+	 
+
+	.rodape{
+		background-color: #615631;
+		display: flex;
+		flex-direction: column;
+		padding-left: 5%;
+		padding-right: 5%;
+	column-gap: 10%;
+	}
+
+	.servico img{
+		display: flex;
+		margin: auto;
+		border-radius: 70%;
+		border: black;
+		max-width: 45%;
+		margin-top: 0;
+		margin-bottom: 0;
+   
+	}
 
 	#logo {
 		display: block;
@@ -318,32 +382,51 @@ li > a:only-child:after { content: ''; }
 
 @media all and (max-width : 630px) {
 
+	#logo {
+		display: block;
+		padding: 10px 20px;
+		float: left;
+		font-size:20px;
+		line-height: 60px;
+		max-width: 80px;
+		color: white;
+	}
+	.servico{
+		padding-left: 5%;
+		padding-right: 5%;
+
+		margin-top: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+	}
+
 	nav ul li {
 		display:flex;
 		width: 94%;
 	}
 
-#hamb{
-    display: flex;
-    flex-direction: row;
+
+
+.servicos{
+	flex-direction: column;
 }
 
+
 }
+
+h4{
+	text-align: center;
+	color: #ffe571;
+	margin-bottom: 1%;
+	}
 
 h5{
 text-align: center;
 color: #ffe571;
-margin-bottom: 1%;
 }
 
-.rodape{
-	background-color: #615631;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	padding-left: 5%;
-	padding-right: 5%;
-column-gap: 10%;
-}
+
 
 ul{
 	list-style: none;
@@ -358,13 +441,85 @@ ul{
 	font-size: small;
 }
 
-#linha{
-	width:  95%;
+#linha1{
 	background-color: #FFF;
-	height: 2px;
-	box-sizing: border-box;
+	height: 4px;
+	grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 5px;
 }
 
  #rodape-links{
     box-sizing: border-box;
 } 
+
+
+.social-icons{
+bottom: 200px;
+}
+
+.social-icons {
+	display: inline;
+  }
+  
+  .social-icons a {
+	font-size: 24px;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 20px;
+	
+  }
+  
+  .social-icons .icon {
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: none;
+	fill: #fff;
+  }
+  
+  .social-icons a:hover .icon{
+	fill: #f0ab00;
+  }
+
+#espaco{
+	width: 10%;
+}
+
+#siga{
+
+grid-column-start: 3;
+  grid-column-end: 4;
+  line-height: 15px;
+  align-items: center;
+
+}
+
+#icones{
+	grid-column-start: 4;
+	  grid-column-end: 5;
+	}
+
+  #siga-nos{
+	  display: grid;
+	  grid-template-columns: 1fr 1fr 1fr 1fr;
+	  background-color: #615631;
+	  padding-left: 10%;
+	  padding-right: 10%;
+
+  }
+
+
+  #linha2{
+	background-color: #FFF;
+	height: 4px;
+  margin-top: 5px;
+}
+#linha3{
+	background-color: #FFF;
+	height: 4px;
+  margin-top: 5px;
+}
+
+svg{
+height: 10px;}
