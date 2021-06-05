@@ -8,7 +8,7 @@ class Banner extends React.Component {
     render() {
         return (
 
-            <img id="banner" src={banner}/>
+            <img id="banner" src={banner} alt="energia solar" />
 
     
         )
