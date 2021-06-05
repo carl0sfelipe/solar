@@ -370,8 +370,8 @@ height: 40px;
 	/* Display Dropdown when clicked on Parent Lable */
 	[id^=drop]:checked + ul {
 		display: block;
-		position: absolute;
-		top:70px
+    position: absolute;
+    top:70px
 	}
 
 	/* Change menu item's width to 100% */
